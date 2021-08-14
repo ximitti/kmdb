@@ -23,7 +23,6 @@ env.read_env()
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-+-(m6wmxgr08q@3#^k5y+n+@&iu@aw77$5qv6l#)yzp3&v+++%"
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -42,6 +41,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "rest_framework.authtoken",
+    "accounts",
+    "kmdb",
 ]
 
 MIDDLEWARE = [
